@@ -1,0 +1,46 @@
+Array:
+Los array son objeto que nos permiten apuntar a una colección de tipos de datos, ya sea strings, números o booleanos.
+Podemos arreglar al contenedor del mismo tantos strings, números o booleanos queremos y acceder a esos elementos cuando deseemos.
+Ejemplo:
+const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+.length: también tiene incorporado el método .length, que cuenta los carácteres y retornará el número de elemetnos del arreglo(Array).
+
+Para acceder a los arreglos e hace con [], teniendo en cuenta su posición que se marca de esta manera:
+const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+                                0         1        2        3
+Escribiremos el número del elemento al que queremos acceder:
+const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+console.log(nombresEstudiantes[1]);  // 'Antonio'
+Por otra parte, se le puede asignar y reasignar algún tipo de variante al elemento de esta manera:
+const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+nombresEstudiantes[0] = 'Jorge';
+
+console.log(nombresEstudiantes);
+
+.push y .pop: sirven para agregar y eliminar elementos en el arreglo, después de su declaraciòn inicial.
+.push:
+const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+nombresEstudiantes.push('Patricia');
+
+console.log(nombresEstudiantes);  // ['Martin', 'Antonio', 'Sara', 'Samuel', 'Patricia']
+.pop:
+const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+nombresEstudiantes.pop();
+
+console.log(nombresEstudiantes);  // ['Martin', 'Antonio', 'Sara']
+
+.unshift y .shift: son iguales a .push y .pop, excepto que operan en el primer elemento de la matriz.
+const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+nombresEstudiantes.unshift('Leo');
+
+console.log(nombresEstudiantes);  // ['Leo', 'Martin', 'Antonio', 'Sara', 'Samuel']
+
+nombresEstudiantes.shift();
+
+console.log(nombresEstudiantes);  // ['Martin', 'Antonio', 'Sara', 'Samuel']
