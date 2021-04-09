@@ -1,0 +1,42 @@
+Variables: una variables es una forma de almacenar el valor de algo para usar más tarde.
+Para crear una variable en JavaScript utilizamos la palabra clave var, seguida de un espacio y el nombre de la variable.
+Le asignamos el valor usando =.
+Hay 3 formas de declarar una variables:
+var: variables globales, tienen acceso en cualquier parte.
+let: variables limitadas, tienen acceso al alcance del bloque.
+const: variables inmutables, no cambian el valor.
+
+Strings: son bloques de texto, siempre se definirán entre comillas, ya sea simple o doble. 
+Cualquier texto entre comillas es una cadena o string.
+
+Funciones: son tipos particulares de Objetos, llamados `callable objects` u objetos invocables, por lo que tienen las mismas propiedades que cualquier objeto.
+Tienen la capacidad de hacer algo con las variables, se calcularlas, cambiarlas, etc.
+Una función comenzará con la palabra clave `function`. Después de eso viene el nombre de la función.
+Luego viene un paréntesis abierto y uno cercano. Y finalmente, abra y cierre los corchetes. 
+Entre estos corchetes es donde irá todo nuestro código a ejecutar.
+Ejemplo:
+function logHola(nombre) {
+    console.log( `Hola, ${nombre}`);
+}
+
+var miNombre = 'Antonio';
+logHola(miNombre);
+
+return: es la declaración de retorno de lo que precisamos en la función. La única forma de devolver algo dentro
+de la función.
+
+Declaraciones if: es un control de flujo y comparación para que nuestra función verifique si algo es "true".
+Ejemplo:
+function puedeManejar(edad) {
+    if (edad > 18) {
+        return true;
+    }
+
+    return false;
+}
+
+puedeManejar(22); // true
+En el ejemplo la declaración "if", verifica si es correcta, si lo es a retornará "true", si no lo es será "false".
+
+Además en el mismo ejemplo utilizamos un Operador de Comparación, a través del símbolo mayor (>); Estos devuelven
+dos valores, llamados "booleanos", true y false.
