@@ -1,0 +1,62 @@
+Objetos: un Objeto es una colección de propiedades.
+Los objetos y las matrices son similares en ciertas cosas, y muy diferentes en otras. 
+Mientras que los array pueden contener múltiples elementos relacionados unos con otros, los objetos contienen mucha información sobre una sola cosa. 
+Los objetos se instancian usando llaves (`{}`).
+TODO en Javascript es un Objeto.
+Ejemplo:
+const nuevoObjeto = {};
+
+Propiedades: a estos Objetos se le puede agregar propiedades.
+A diferencia de las matrices que tienen elementos valorados en índices, los objetos usan un concepto llamado pares de clave:valor. 
+La clave (_key_) es el identificador y el valor (_value_) es el valor que queremos guardar en esa clave. 
+La sintaxis es "clave: valor". Los objetos pueden contener muchos pares de clave-valor, deben estar separados por una coma (importante: sin punto y coma dentro de un objeto). 
+Las claves son únicas en un objeto, solo puede haber una clave de ese nombre, aunque, varias claves pueden tener el mismo valor. 
+Los valores pueden ser cualquier tipo de dato de Javascript; cadena, número, booleano, matriz, función o incluso otro objeto. 
+Ejemplo:
+
+const usuario = {
+    username: 'juan.perez',
+    password: 'loremipsumpwd123',
+    lovesJavascript: true,
+    favoriteNumber: 42
+};
+Asignación de valores: Asignar valores funciona igual que acceder a ellos. 
+Podemos asignarlos, cuando creamos el objeto, con notación de puntos o con notación de corchetes:
+
+const nuevoUsuario = {
+    esNuevo: true
+}
+
+const loveJSString = 'lovesJavascript';
+
+nuevoUsuario.username = 'otro.nombre.de.usuario';
+nuevoUsuario['password'] = '12345';
+nuevoUsuario[loveJSString] = true;
+
+Métodos:En los objetos, los valores se pueden establecer en funciones. 
+Las funciones guardadas en un objeto se denominan métodos.
+Podemos establecer una clave para un nombre y el valor para una función. Al igual que otras veces que llamamos métodos, llamaremos a este método usando notación de puntos y paréntesis finales.
+Ejemplo:
+const nuevoObjeto = {
+    decirHola: function() {
+        console.log('Hola a todo el mundo!');
+    }
+}
+
+Bucle for in:  A veces queremos iterar sobre cada par clave-valor en nuestro objeto. 
+Los objetos no contienen índices numéricos, por lo que el bucle estándar no funcionará para los objetos. 
+Javascript tiene un segundo tipo de bucle for integrado llamado “for … in loop”. Es una sintaxis ligeramente diferente, comienza igual pero entre paréntesis declararemos una variable, la palabra clave in y el nombre del objeto. 
+Esto recorrerá cada clave del objeto y finalizará cuando se hayan iterado todas las claves. Podemos usar esta clave, y la notación de corchetes, en nuestro bucle for para acceder al valor asociado con esa clave.
+Ejemplo:
+const usuario = {
+    username: 'juan.perez',
+    password: 'loremipsumpwd123',
+    lovesJavascript: true,
+    favoriteNumber: 42
+};
+
+for (let clave in usuario){
+    console.log(clave);
+    console.log(usuario[clave]);
+}
+
