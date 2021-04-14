@@ -1,0 +1,38 @@
+Clases:Muchas veces cuando creamos un objeto, estamos creando una plantilla. 
+En lugar de copiar esa plantilla una y otra vez, Javascript nos da acceso a lo que llamamos un constructor o `class`. 
+Las clases comparten gran parte de la misma funcionalidad que los objetos normales, pero también se expande mucho en esa funcionalidad. 
+Las clases son útiles para crear muchos objetos que comparten algunas de las mismas propiedades y métodos (como los usuarios en un sitio web).
+Las clases se utilizan para representar entidades o conceptos, como los sustantivos en el lenguaje.
+
+prototype:La creación de funciones es costosa (refiriéndonos a la capacidad de memoria de una computadora) y cada vez que creamos un nuevo objeto de clase con métodos, estamos recreando esos métodos en la memoria. 
+Puede imaginar que si estamos creando miles de objetos de clase a partir de una clase con docenas de métodos, la memoria se acumulará rápidamente (20.000 - 40.000 métodos). 
+Las clases tienen una forma única de establecer un método una vez y dar acceso a cada objeto de esa clase a esos métodos. 
+Esto se llama el `prototype`. Cada clase tiene una propiedad _prototype_, que luego podemos establecer en métodos.
+Ejemplo:
+function Usuario(nombre, github) {
+    this.nombre = nombre;
+    this.github = github;
+}
+
+Usuario.prototype.introduccion = function(){
+    return 'Mi nombre es ' + this.nombre + ', mi usuario de Github es ' + this.github + '.';
+}
+
+let matias = new Usuario('Matias', 'matias.perez');
+let pedro = new Usuario('Pedro', 'prodriguez');
+
+console.log(matias.introduccion()); // Mi nombre es Matias, mi usuario de Github es matias.perez.
+console.log(pedro.introduccion()); // Mi nombre es Pedro, mi usuario de Github es prodriguez.
+
+Constructors: En programación orientada a objetos se denomina constructor al código que se ejecuta cuando se crea un objeto de un tipo determinado (a cada objeto creado se le denomina instancia).  
+Cuando se instancia un objeto, funciona como constructor todo el código declarado dentro de la función, es decir, todo código dentro de la función que pueda ser ejecutado será ejecutado (no se ejecutarán los métodos de la función, ya que será necesario invocarlos para que se ejecuten).
+Ejemplo:
+function Car (marca, cv, color) {
+    this.marca = marca;
+    this.cv = cv;
+    this.color = color;
+}
+
+var audi = new Car('audi', 1500, 'verde');
+var gol = new Car('VW', 1000, 'azul');
+
