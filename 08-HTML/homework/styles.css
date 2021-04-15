@@ -1,0 +1,34 @@
+h1 {
+    color: blue;
+}
+
+img {
+    width: 400px;
+}
+
+body {
+    background-image: url("https://previews.123rf.com/images/yurephoto/yurephoto1301/yurephoto130100031/17700109-fondo-seamless-tileable-para-fondos-de-pantalla-alta-resoluci%C3%B3n-colores-claros.jpg");
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+.divClass {
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#thirdDiv {
+    background-color: brown;
+    padding: 50px;
+    border: 1px solid black;
+    margin: 0;
+    align-items: center;
+}
+
+#spanId {
+    font-size: 18px;
+    margin: 50px;
+}
